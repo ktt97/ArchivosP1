@@ -1,9 +1,7 @@
 # Tunel del servicio HTTP
 
 ## PORT FORWART
-
-El port forwarding nos permite comunicar la maquina servidor desde uno de sus puertos, en este caso el 80, con nuestro host (Windows) en su puerto 8080. La comunicación permite al host acceder al servicio HTTP del servidor usando localhost indicando los puertos anteriormente descritos. 
-La configuración se realiza directamente desde el vagrantfile (anexado) en la carpeta raiz usando la siguientes sintaxis:
+Permite la conexión entre los puertos de la maquina virtual (servidor) y el host (maquina real) lo que hace posible acceder al servidor HTTP usando localhost e indicando el puerto de acceso (que a su vez está conectado al puerto de HTTP del servidor), para esto se configura el vagrantfile de la maquina y se indica que puerto se desea conectar entre host y maquina virtual por ejemplo el puerto 80 del servidor y el 8080 del host (esto se puede ver en el Vagrantgile anexado).
 
 servidor.vm.network "forwarded_port", guest: 80, host: 8080
 
@@ -11,6 +9,6 @@ servidor.vm.network "forwarded_port", guest: 80, host: 8080
 
 A continuacion, continuando con el acceso al servidor, especialmente al servicio HTTP, ahora fue posible generar el acceso desde acualquier lugar de internet mediante un enlace URL. En este caso, mediante una cuenta NGROK, y ejecuandolo en nuestro host, esta aplicacion genera un URL temporal. Sin embargo, para obtener el acceso debemos ejecutar nuevamente ngrok. Para evitar este proceso, se realiza la instalacion de Vagrant share:
 
-vagrant plugin install vagrant-share
+kvagrant plugin install vagrant-share
 
 Luego simplemente se escribe la sentencia "Vagrant share" y nos arroja el URL temporal evitandonos ejecutar nuevamente NGROK
