@@ -1,0 +1,3 @@
+# P2P (Peer-to-peer) NETWORK ~ BLOCKCHAIN
+
+Para la simulación de una red p2p se descarga el entorno de programación "Node.js" y su sistema de gestión de paquetes, que permiten la ejecución de scripts desarrollados en JavaScript y su paradigma de programación orientada a objetos, los cuales serán usados para definir tanto los métodos necesarios para la creación de la red de blockchain y la validación de la misma, como los atributos de un bloque individual de la red. Al ejecutar el archivo "thecoin.js" se puede visualizar una simulación de la red con sus caracteristicas principales como lo son los hash que se intercambian entre los computadores de la red.   
